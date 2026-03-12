@@ -2,7 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+// Es importante importar el modelo Course
+use App\Models\Course; 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,11 +16,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        // 1. Ejecutar primero los Seeders (Kits y Usuarios)
+        $this->call([
+            KitSeeder::class,
+            UserSeeder::class,
         ]);
+
+        // 2. Ejecutar el Factory para crear los 100 cursos de prueba
+        Course::factory(100)->create();
     }
 }

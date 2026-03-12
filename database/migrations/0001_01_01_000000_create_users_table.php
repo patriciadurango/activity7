@@ -12,11 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
+            $table->id(); // Equivale a userId
+            $table->string('name', 100);
+            $table->string('email', 100)->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            
+            // Aquí agregamos las columnas que te faltan según tu diagrama ER:
+            $table->enum('role', ['Student', 'Teacher', 'Admin']);
+            $table->integer('groupId')->nullable(); // nullable por si aún no creas los grupos
+            
             $table->rememberToken();
             $table->timestamps();
         });
