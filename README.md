@@ -57,3 +57,12 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# Homework 6 - Robotics School Platform
+
+## Project Description
+[cite_start]A comprehensive web platform designed for a small robotics school to help teachers deliver courses to students[cite: 7]. [cite_start]The platform organizes students into Beginner, Intermediate, and Advanced groups, and assigns specific courses to them[cite: 9]. [cite_start]Each course includes multimedia content, didactic materials, and an associated robotics kit. 
+
+## ER Diagram
+*(Include your diagram image in the repository and reference it here)*
+![Robotics Platform ER Diagram](./link-to-your-er-diagram-image.png)
